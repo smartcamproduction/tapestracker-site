@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tapes Tracker</title>
+  <link rel="icon" href="/favicon.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Static hosting has no /u/<nick> pages, so this fallback serves invite links: with the app
+       installed the phone opens the profile directly (app links) and never shows this page. -->
+  <div class="stripes"></div>
+  <header>
+    <a class="logo" href="/">Tapes Tracker</a>
+  </header>
+  <main>
+    <div id="invite" hidden>
+      <h1>Zaproszenie od <span id="nick"></span></h1>
+      <p class="lead">Ta osoba śledzi seriale i filmy w Tapes Tracker. Zainstaluj aplikację, żeby zobaczyć jej profil i ją obserwować.</p>
+      <!-- PLACEHOLDER: store links once the app is published (Google Play / App Store). -->
+      <div class="buttons">
+        <a class="button" id="open" href="#">Otwórz w aplikacji</a>
+        <a class="button secondary" aria-disabled="true" href="#">Google Play — wkrótce</a>
+      </div>
+      <p class="muted">Masz już aplikację? Po instalacji kliknij link z zaproszenia jeszcze raz albo wyszukaj nazwę użytkownika w zakładce Znajomi.</p>
+    </div>
+    <div id="missing">
+      <h1>Nie ma takiej strony</h1>
+      <p><a href="/">Przejdź na stronę główną</a></p>
+    </div>
+  </main>
+  <script>
+    var match = /^\/u\/([a-z0-9._]{3,20})\/?$/i.exec(location.pathname);
+    if (match) {
+      var nick = match[1].toLowerCase();
+      document.title = '@' + nick + ' — Tapes Tracker';
+      document.getElementById('nick').textContent = '@' + nick;
+      document.getElementById('open').href = 'tracker://social/u/' + nick;
+      document.getElementById('invite').hidden = false;
+      document.getElementById('missing').hidden = true;
+    }
+  </script>
+</body>
+</html>

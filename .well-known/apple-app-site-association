@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["PLACEHOLDER_APPLE_TEAM_ID.com.tapestracker"],
+        "components": [{ "/": "/u/*" }]
+      }
+    ]
+  }
+}
