@@ -10,3 +10,12 @@ deletion (`/usun-konto/`) and invite links (`/u/<nick>`, served by `404.html`).
 
 Any static host works (GitHub Pages, Cloudflare Pages, Hostido FTP). `CNAME` and `.nojekyll`
 are for GitHub Pages.
+
+## Publishing
+
+Hosted on GitHub Pages from the public repo `smartcamproduction/tapestracker-site` (only this
+folder — the app repo stays private). After changing files here, commit and run from the repo root:
+
+    git subtree push --prefix site site main
+
+(`site` is the git remote of that repo.) DNS at Hostido: see docs/SETUP-DOMENA.md.
