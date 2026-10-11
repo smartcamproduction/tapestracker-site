@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.tapestracker",
-      "sha256_cert_fingerprints": ["PLACEHOLDER:SHA256_OF_EAS_SIGNING_KEY"]
+      "sha256_cert_fingerprints": ["46:DE:1F:CB:56:3B:2E:06:BD:29:DE:74:8A:C2:2D:C9:03:84:CF:23:44:73:0C:B2:69:B3:E4:60:A8:93:33:4D"]
     }
   }
 ]
