@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["PLACEHOLDER_APPLE_TEAM_ID.com.tapestracker"],
+        "appIDs": ["XULP3L29B3.com.tapestracker"],
         "components": [{ "/": "/u/*" }]
       }
     ]
